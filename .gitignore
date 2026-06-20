@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+venv/
+
+datasets/
+data/
+
+uploads/
+food_crops/
+runs/
+
+*.pt
+*.pth
+
+result.jpg
+nutrition_result.json
