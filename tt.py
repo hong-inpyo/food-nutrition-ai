@@ -1,5 +1,5 @@
-import fastapi_app
+from ultralytics import YOLO
 
-print(fastapi_app.__file__)
+model=YOLO("best.pt")
 
-print(fastapi_app.app)
+print(model.names)

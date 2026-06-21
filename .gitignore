@@ -1,17 +1,43 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
 
+# Virtual env
 venv/
+.env
 
+# Dataset
 datasets/
 data/
-
-uploads/
 food_crops/
+
+# Upload
+uploads/
+
+# Training results
 runs/
 
+# Models
+models/
 *.pt
 *.pth
+*.onnx
 
+# Depth Anything weights
+Depth-Anything-V2/checkpoints/
+
+# Generated files
 result.jpg
 nutrition_result.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# HuggingFace cache
+.cache/

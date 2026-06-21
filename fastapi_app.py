@@ -1,4 +1,4 @@
-print("NEW PIPELINE LOADED")
+
 from fastapi import FastAPI, UploadFile, File
 import shutil
 import os
@@ -70,10 +70,8 @@ async def predict(
     )
 
 
-    return {
+    result = predict_food_nutrition(save_path)
 
-        "foods": result,
+    result["result_image"] = "result.jpg"
 
-        "result_image":"result.jpg"
-
-    }
+    return result

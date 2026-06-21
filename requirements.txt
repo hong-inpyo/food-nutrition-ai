@@ -3,20 +3,14 @@ uvicorn
 python-multipart
 
 streamlit
+
 requests
-pandas
-pillow
 
 numpy
-opencv-python
+opencv-python-headless
+pillow
 
 torch
 torchvision
 
 ultralytics
-
-matplotlib
-scikit-learn
-tqdm
-transformers
-timm

@@ -3,8 +3,8 @@ import requests
 import pandas as pd
 from PIL import Image
 
+# API_URL = "http://backend:8000/predict"
 API_URL = "http://127.0.0.1:8000/predict"
-
 
 st.set_page_config(
     page_title="AI Food Nutrition",
@@ -399,7 +399,8 @@ if uploaded_file:
 
         result = response.json()
         foods = result["foods"]
-
+        summary = result["summary"]
+        feedback = result["feedback"]
         # ======================
         # Result image (in same card area)
         # ======================
@@ -412,7 +413,30 @@ if uploaded_file:
             with rcol1:
                 st.markdown(f'<div class="section-header">{TXT["origin"]}</div>', unsafe_allow_html=True)
                 st.image(image, use_container_width=True)
+                
+        with st.container(border=True):
 
+            st.markdown(
+                '<div class="section-header">🧠 AI 영양 코치</div>',
+                unsafe_allow_html=True
+            )
+
+            st.markdown(
+                f"""
+                <div style="
+                background:#FFF9F2;
+                border-left:5px solid #FF8C42;
+                padding:20px;
+                border-radius:15px;
+                font-size:16px;
+                line-height:1.8;
+                color:#333;
+                ">
+                {feedback}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         total_weight = sum(x["weight_g"] for x in foods)
         total_kcal = sum(x["kcal"] for x in foods)
         total_protein = sum(x["protein_g"] for x in foods)

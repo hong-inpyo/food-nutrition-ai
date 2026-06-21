@@ -1,0 +1,15 @@
+venv/
+runs/
+uploads/
+.git
+
+data/
+datasets/
+
+__pycache__/
+
+*.jpg
+*.png
+
+result.jpg
+nutrition_result.json

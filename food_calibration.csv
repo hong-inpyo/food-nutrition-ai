@@ -1,0 +1,13 @@
+food,real_weight,pred_weight
+
+
+
+chicken,150,220
+chicken,160,210
+chicken,170,230
+
+soup,80,70
+soup,90,75
+
+shrimp,70,85
+shrimp,80,90
